@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Destinasi - Wisata Lombok</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-blue-50 text-gray-800 flex flex-col min-h-screen">
+
+  <header class="bg-gray-900 text-white shadow fixed w-full z-50 top-0">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold">WISATA LOMBOK</h1>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="Index.html" class="hover:text-blue-400 transition">Beranda</a></li>
+        <li><a href="Destinasi.html" class="text-blue-400 font-semibold">Daftar Destinasi</a></li>
+        <li><a href="Galery.html" class="hover:text-blue-400 transition">Galeri</a></li>
+      </ul>
+
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden bg-gray-800 md:hidden">
+      <ul class="flex flex-col items-center py-3 space-y-3">
+        <li><a href="index.html" class="hover:text-blue-400">Beranda</a></li>
+        <li><a href="#daftar-destinasi" class="hover:text-blue-400">Daftar Destinasi</a></li>
+        <li><a href="#galeri" class="hover:text-blue-400">Galeri</a></li>
+        <li><a href="#kontak" class="hover:text-blue-400">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="flex-grow w-full pt-28 pb-20 px-4" id="daftar-destinasi">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 text-gray-800">Daftar Destinasi Wisata Lombok</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Jelajahi destinasi terbaik Pulau Lombok — dari gunung megah hingga pantai tropis nan indah.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+   
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-5 flex flex-col">
+        <img src="img/kuta.jpg" alt="Pantai Kuta" class="rounded-lg mb-4 w-full h-56 object-cover" />
+        <h2 class="text-xl font-semibold mb-2">Pantai Kuta Lombok</h2>
+        <p class="text-gray-600 flex-grow text-sm sm:text-base">
+          Pantai dengan pasir putih halus seperti merica dan air laut biru jernih, dikelilingi bukit hijau.
+        </p>
+        <a href="Detail.html?id=kuta"
+          class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-full font-medium transition">
+          Lihat Detail
+        </a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-5 flex flex-col">
+        <img src="img/rinjani.avif" alt="Gunung Rinjani" class="rounded-lg mb-4 w-full h-56 object-cover" />
+        <h2 class="text-xl font-semibold mb-2">Gunung Rinjani</h2>
+        <p class="text-gray-600 flex-grow text-sm sm:text-base">
+          Gunung berapi megah dengan pemandangan Danau Segara Anak dan panorama alam menakjubkan.
+        </p>
+        <a href="Detail.html?id=rinjani"
+          class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-full font-medium transition">
+          Lihat Detail
+        </a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-5 flex flex-col">
+        <img src="img/gili.jpg" alt="Gili Trawangan" class="rounded-lg mb-4 w-full h-56 object-cover" />
+        <h2 class="text-xl font-semibold mb-2">Gili Trawangan</h2>
+        <p class="text-gray-600 flex-grow text-sm sm:text-base">
+          Pulau wisata populer dengan pantai pasir putih dan air laut biru jernih yang menawan.
+        </p>
+        <a href="Detail.html?id=gili"
+          class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-full font-medium transition">
+          Lihat Detail
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="kontak" class="bg-gray-900 text-white py-6 mt-auto">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-6 text-center md:text-left">
+      <p class="text-sm">&copy; 2025 Wisata Pulau Lombok. Semua Hak Dilindungi.</p>
+      <div class="flex justify-center md:justify-end gap-6">
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="facebook"></i><span>Facebook</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="instagram"></i><span>Instagram</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="youtube"></i><span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

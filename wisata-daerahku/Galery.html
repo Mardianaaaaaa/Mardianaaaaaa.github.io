@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri Wisata Lombok</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.75rem; 
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .gallery-item img {
+      transition: transform 0.6s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-title {
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body class="bg-blue-100 text-gray-800 flex flex-col min-h-screen">
+
+  <header class="bg-gray-900 text-white shadow fixed w-full z-50">
+    <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-lg sm:text-xl font-bold">WISATA LOMBOK</h1>
+      <ul class="hidden md:flex gap-6 font-medium">
+        <li><a href="Index.html" class="hover:text-blue-400 transition">Beranda</a></li>
+        <li><a href="Destinasi.html" class="hover:text-blue-400 transition">Daftar Destinasi</a></li>
+        <li><a href="Galery.html" class="text-blue-400 font-semibold">Galeri</a></li>
+      </ul>
+      <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-gray-800 focus:outline-none">☰</button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden flex-col md:hidden bg-gray-800 text-white text-center">
+      <a href="index.html" class="py-2 hover:bg-gray-700">Beranda</a>
+      <a href="destinasi.html" class="py-2 hover:bg-gray-700">Destinasi</a>
+      <a href="galeri.html" class="py-2 hover:bg-gray-700">Galeri</a>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24 pb-16 px-4 sm:px-8">
+
+    <section class="max-w-7xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">🌿 Wisata Alam</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="gallery-item">
+          <img src="img/pink.jpg" alt="Pantai Pink" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Pantai Pink</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/rinjani.avif" alt="Gunung Rinjani" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Gunung Rinjani</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/benang kelambu.jpg" alt="Air Terjun Benang Kelambu" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Air Terjun Benang Kelambu</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/danau.jpg" alt="Danau Segara Anak" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Danau Segara Anak</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/savana.jpg" alt="Savana Sembalun" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Savana Sembalun</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/pulau.jpg" alt="Pulau Gili" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Pulau Gili</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">🎭 Wisata Budaya</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="gallery-item">
+          <img src="img/sade.jpg" alt="Kampung Sade" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Kampung Sade</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/presean.jpg" alt="Presean" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Presean</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/nyongkolan.jpg" alt="Nyongkolan" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Nyongkolan</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/gb 1.jpg" alt="Gendang Belek" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Gendang Belek</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/nyale.jpg" alt="Festival Bau Nyale" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Festival Bau Nyale</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/lambung.jpg" alt="Baju Adat Lombok" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Baju Adat Lombok</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">🍽️ Wisata Kuliner</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="gallery-item">
+          <img src="img/sate.jpg" alt="Sate Bulayak" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Sate Bulayak</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/pelecing 222.jpg" alt="Pelecing Kangkung" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Pelecing Kangkung</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/bbalung.jpg" alt="Beberok Terong" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Beberok Terong</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/balap puyung.jpg" alt="Nasi Balap Puyung" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Nasi Balap Puyung</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/ares.jpg" alt="Ares" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Ares</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="img/cerorot222.jpg" alt="Cerorot" class="w-full h-64 object-cover">
+          <div class="gallery-overlay"><span class="gallery-title">Cerorot</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="kontak" class="bg-gray-900 text-white py-6 mt-auto">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-6 text-center md:text-left">
+      <p class="text-sm">&copy; 2025 Wisata Pulau Lombok</p>
+      <div class="flex justify-center md:justify-end gap-6">
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="facebook"></i><span>Facebook</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="instagram"></i><span>Instagram</span>
+        </a>
+        <a href="#" class="flex items-center gap-2 hover:text-blue-400 transition">
+          <i data-lucide="youtube"></i><span>YouTube</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    toggle.addEventListener("click", () => menu.classList.toggle("hidden"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+header {
+    background: linear-gradient(to right, #9bc2fd, #f78c62);
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav ul li a{
+    padding: 102px;
+  }
+  
